@@ -8,86 +8,107 @@
 % oscillations, central force, non-inertial reference frame, fluid dynamics
 % License intent: CC BY-SA 4.0
 
-Classical mechanics is most useful when its subjects are understood as a connected
-sequence of ideas rather than as a collection of unrelated formulas.  One first
-learns how to describe motion, then how interactions change motion, and then how
-energy, momentum, and angular momentum provide alternative descriptions of the
-same dynamics.  These ideas extend naturally to gravitating systems, oscillators,
-fluids, constrained systems, rigid bodies, and finally to Lagrangian and
-Hamiltonian mechanics.
+\section*{Mechanics learning path}
 
-This entry gives a learning path through classical mechanics from a first
-calculus-based college course to the principal topics of graduate classical
-mechanics.  It is also useful as a checklist for review for the Physics Subject
-Test of the Graduate Record Examination (GRE).  The order below is pedagogical:
-it follows prerequisite relations rather than the order of a classification
-scheme or a particular textbook.
+A \emph{mechanics learning path} is a prerequisite-ordered sequence of topics that organizes
+classical mechanics from introductory particle motion through the analytical formulations used
+in advanced undergraduate and graduate study.  Its purpose is pedagogical rather than taxonomic:
+a classification scheme groups related subjects, whereas a learning path shows which ideas are
+normally best understood before later ideas are attempted.
 
-A compact view of the progression is
+Classical mechanics is particularly well suited to this organization because its major methods
+form a connected hierarchy.  A student first learns how to describe motion, then how interactions
+change motion, and then how energy and momentum provide complementary descriptions of the same
+dynamics.  Those ideas extend naturally to rotation, gravitation, oscillations, fluids, constrained
+systems, rigid bodies, and finally the Lagrangian and Hamiltonian formulations.
+
+The central progression is
 \[
-\begin{array}{c}
-\text{kinematics}
-\longrightarrow
-\text{Newtonian dynamics}
-\longrightarrow
-\text{energy and momentum}
-\longrightarrow
-\text{rotation and systems of particles}
-\\[3pt]
-\longrightarrow
-\text{gravitation, oscillations, and fluids}
-\longrightarrow
-\text{generalized coordinates and constraints}
-\\[3pt]
-\longrightarrow
-\text{Lagrangian mechanics}
-\longrightarrow
-\text{Hamiltonian mechanics}
-\longrightarrow
-\text{advanced classical dynamics}.
-\end{array}
+\begin{aligned}
+\text{motion}
+&\longrightarrow \text{forces}
+\longrightarrow \text{energy and momentum}
+\longrightarrow \text{rotation and systems} \\
+&\longrightarrow \text{gravitation, oscillations, and fluids}
+\longrightarrow \text{generalized coordinates} \\
+&\longrightarrow \text{Lagrangian mechanics}
+\longrightarrow \text{Hamiltonian mechanics}.
+\end{aligned}
 \]
 
-\section*{Mathematical preparation}
+\begin{figure}[h]
+\centering
+\setlength{\unitlength}{1mm}
+\begin{picture}(118,112)
+\put(14,100){\framebox(90,9){Mathematical foundations}}
+\put(59,100){\vector(0,-1){7}}
+\put(14,84){\framebox(90,9){Kinematics}}
+\put(59,84){\vector(0,-1){7}}
+\put(14,68){\framebox(90,9){Newtonian dynamics}}
+\put(59,68){\vector(0,-1){7}}
+\put(14,52){\framebox(90,9){Energy and momentum}}
+\put(59,52){\vector(0,-1){7}}
+\put(14,36){\framebox(90,9){Rotation, gravitation, oscillations, and fluids}}
+\put(59,36){\vector(0,-1){7}}
+\put(14,20){\framebox(90,9){Generalized coordinates and Lagrangian mechanics}}
+\put(59,20){\vector(0,-1){7}}
+\put(14,4){\framebox(90,9){Hamiltonian and graduate classical mechanics}}
+\end{picture}
+\caption{A prerequisite-ordered route from first-year mechanics to graduate classical mechanics.}
+\end{figure}
 
-A student beginning calculus-based mechanics should be comfortable with algebra,
-trigonometry, and elementary vector operations.  Calculus enters immediately
-because velocity and acceleration are derivatives and because displacement,
-impulse, and work are naturally expressed by integrals.
+This entry is intended to serve as a student-facing map of the mechanics portion of PhysicsLibrary.
+The PACS classification remains useful for cataloging individual entries, but the order below is
+chosen primarily according to conceptual dependence.
 
-The most important mathematical prerequisites are:
-\begin{itemize}
-\item units, dimensions, and scientific notation;
-\item scalar and vector quantities;
-\item Cartesian vector components;
-\item the dot product and cross product;
-\item differentiation and integration of elementary functions;
-\item elementary ordinary differential equations;
-\item basic matrix algebra and eigenvalues for later work on normal modes and
-rigid-body dynamics;
-\item partial derivatives and multivariable calculus for analytical mechanics.
-\end{itemize}
+\section{Four natural entry points}
 
-Dimensional analysis should be used throughout mechanics.  For example, if a
-proposed expression for a time contains a term with dimensions of velocity, the
-expression cannot be correct regardless of the numerical values inserted into it.
-This kind of check is especially valuable in timed problem solving.
+\subsection*{First-year calculus-based physics}
 
-\section*{Readiness diagnostic}
+A beginning university student should start with mathematical foundations and kinematics, then
+proceed through Newtonian dynamics, work and energy, momentum, rotation, gravitation, oscillations,
+and elementary fluids.  This route supplies the conventional mechanics portion of a calculus-based
+freshman physics course.
 
-The following questions locate a reasonable entry point into the path.
+\subsection*{GRE Physics preparation}
+
+A student preparing for the GRE Physics Subject Test should first verify mastery of introductory
+mechanics and then review the topics explicitly included in the classical-mechanics portion of the
+test.  ETS currently assigns about twenty percent of the test to classical mechanics.  The listed
+scope includes kinematics, Newton's laws, work and energy, oscillatory motion, rotational motion,
+systems of particles, central forces and celestial mechanics, three-dimensional particle dynamics,
+Lagrangian and Hamiltonian methods, non-inertial frames, and elementary fluid dynamics.
+
+\subsection*{Upper-undergraduate analytical mechanics}
+
+A student beginning a junior- or senior-level mechanics course should already be comfortable with
+Newton's laws, conservation laws, rotation, gravitation, ordinary differential equations, and
+basic linear algebra.  The natural starting point is then generalized coordinates and constraints,
+followed by Hamilton's principle, Lagrange's equations, central forces, small oscillations,
+non-inertial frames, and rigid-body dynamics.
+
+\subsection*{Graduate classical mechanics}
+
+A graduate student should regard the earlier stages as review and continue through Hamiltonian
+mechanics, Poisson brackets, canonical transformations, Hamilton--Jacobi theory, action-angle
+variables, perturbation theory, advanced rigid-body motion, nonlinear dynamics, and continuum or
+field extensions.
+
+\section{Readiness diagnostic}
+
+The following questions help locate an appropriate entry point.  They are not intended as a formal
+examination.
 
 \subsection*{Preparation for introductory mechanics}
 
-A student is ready to begin the introductory sequence if most of the following
-statements are true.
+A student should be able to answer yes to most of the following.
 \begin{enumerate}
-\item A vector can be resolved into Cartesian components.
-\item A scalar can be distinguished from a vector.
-\item A derivative can be interpreted as a rate of change.
-\item An integral can be interpreted as accumulated change.
-\item Basic trigonometric relations can be used to resolve components.
-\item Algebraic equations can be rearranged reliably for an unknown quantity.
+\item Can a vector be resolved into Cartesian components?
+\item Can scalars and vectors be distinguished physically and mathematically?
+\item Can a derivative be interpreted as an instantaneous rate of change?
+\item Can an integral be interpreted as accumulated change or area under a curve?
+\item Can elementary algebraic equations be solved for an unknown quantity?
+\item Can basic trigonometric relations be used in mechanical geometry?
 \end{enumerate}
 
 \subsection*{Preparation for analytical mechanics}
@@ -95,11 +116,10 @@ statements are true.
 Before beginning Lagrangian mechanics, a student should normally be able to:
 \begin{enumerate}
 \item draw and use a free-body diagram;
-\item decide when Newton's second law, energy conservation, or momentum
-conservation is the most efficient method;
+\item decide when Newton's second law, energy conservation, or momentum conservation is most efficient;
 \item solve elementary collision problems;
 \item compute or use a moment of inertia;
-\item work with torque and angular momentum as vectors;
+\item use torque and angular momentum as vectors;
 \item solve the simple harmonic oscillator differential equation;
 \item use partial derivatives and elementary multivariable functions;
 \item carry out basic matrix operations.
@@ -107,97 +127,103 @@ conservation is the most efficient method;
 
 \subsection*{Preparation for graduate mechanics}
 
-A student entering graduate classical mechanics should additionally be
-comfortable with generalized coordinates, Lagrange's equations, multivariable
-Taylor expansions, linear algebra for coupled differential equations, vector
-calculus, coordinate transformations, and first-order systems of differential
-equations.
+A student entering graduate classical mechanics should additionally be comfortable with generalized
+coordinates, Lagrange's equations, multivariable Taylor expansions, linear algebra for coupled
+differential equations, vector calculus, coordinate transformations, and first-order systems of
+ordinary differential equations.
 
-\section*{Stage I: kinematics}
+\section{Stage A: mathematical and kinematic foundations}
 
-\emph{Kinematics} describes motion without yet specifying the interactions that
-produce it.  The basic hierarchy is
+The first stage establishes the mathematical language used to describe motion before considering
+what causes it.
+
+\subsection*{Units and dimensional analysis}
+
+Dimensional analysis provides an immediate check on equations and is often useful for estimating
+the functional dependence of a result.  Mechanics students should be fluent with SI units, base
+dimensions, scaling arguments, and order-of-magnitude reasoning.
+
+\subsection*{Scalars and vectors}
+
+Position, displacement, velocity, acceleration, force, momentum, torque, and angular momentum all
+require careful use of vector algebra.  Essential tools include components, unit vectors, dot
+products, and cross products.
+
+\subsection*{Coordinate systems}
+
+Cartesian coordinates should be learned first.  Cylindrical and spherical coordinates become
+important when the geometry of a problem has rotational or radial symmetry.  Coordinate choice
+becomes still more important later in generalized-coordinate mechanics.
+
+\subsection*{Position, velocity, and acceleration}
+
+The basic kinematic hierarchy is
 \[
-\mathbf v=\frac{d\mathbf r}{dt},
+\mathbf{v}(t)=\frac{d\mathbf{r}}{dt},
 \qquad
-\mathbf a=\frac{d\mathbf v}{dt}
-          =\frac{d^2\mathbf r}{dt^2}.
+\mathbf{a}(t)=\frac{d\mathbf{v}}{dt}
+             =\frac{d^2\mathbf{r}}{dt^2}.
 \]
+A student should be able to move in both directions through this hierarchy: differentiating a
+trajectory to obtain velocity and acceleration, and integrating acceleration subject to initial
+conditions to recover velocity and position.
 
-A complete introductory treatment should include position and displacement,
-average and instantaneous velocity, average and instantaneous acceleration,
-motion graphs, constant acceleration, variable acceleration, projectile motion,
-uniform circular motion, and relative motion.
+\subsection*{Motion graphs and elementary trajectories}
 
-The constant-acceleration formulas should be understood as results of integration,
-not as independent formulas to memorize.  If \(\mathbf a\) is constant, then
-\[
-\mathbf v(t)=\mathbf v_0+\mathbf a t
-\]
-and
-\[
-\mathbf r(t)=\mathbf r_0+\mathbf v_0 t+\frac12\mathbf a t^2.
-\]
-
-At a more advanced level, kinematics should be repeated in polar, cylindrical,
-and spherical coordinates.  The derivatives of the coordinate basis vectors then
-contribute to velocity and acceleration, preparing the student for central-force
-motion and rotating reference frames.
+Position--time, velocity--time, and acceleration--time graphs connect geometric intuition with
+calculus.  Constant-acceleration equations should be understood as consequences of integration,
+not merely memorized formulas.  Projectile motion, uniform circular motion, and relative motion
+then extend the same ideas to two and three dimensions.
 
 \paragraph{Checkpoint.}
-Given \(\mathbf r(t)\), the student should be able to obtain velocity and
+Given a trajectory $\mathbf{r}(t)$, the student should be able to determine velocity and
 acceleration, interpret their directions, and describe the resulting motion.
 
-\section*{Stage II: Newtonian dynamics}
+\section{Stage B: Newtonian dynamics}
 
-Dynamics connects motion to physical interactions.  Newton's second law may be
-written in the momentum form
+Dynamics connects observed motion to physical interactions.  Newton's second law is
 \[
-\sum \mathbf F=\frac{d\mathbf p}{dt},
+\sum \mathbf{F}=\frac{d\mathbf{p}}{dt},
 \]
-which becomes
+which reduces to
 \[
-\sum \mathbf F=m\mathbf a
+\sum \mathbf{F}=m\mathbf{a}
 \]
-for a particle of constant mass.
+for constant mass.
 
-The central skill in elementary dynamics is converting a physical description
-into a force model.  This requires mastery of free-body diagrams and of common
-forces such as weight, normal force, tension, static and kinetic friction, spring
-forces, and drag forces.  Connected bodies, pulleys, inclined planes, and curved
-paths provide important examples because they require careful choices of system
-boundary and coordinate axes.
+The central skill in elementary dynamics is converting a physical description into a force model.
+This requires mastery of free-body diagrams and common interactions such as weight, normal force,
+tension, static and kinetic friction, spring forces, and drag forces.  Connected bodies, pulleys,
+inclined planes, and curved paths provide important examples because they require careful choices
+of system boundary and coordinate axes.
 
-Circular motion is especially important because constant speed does not imply
-zero acceleration.  For uniform circular motion,
+Circular motion is important because constant speed does not imply zero acceleration.  For uniform
+circular motion,
 \[
 a_r=\frac{v^2}{r}=\omega^2 r,
 \]
 directed toward the center of curvature.
 
 \paragraph{Checkpoint.}
-Given a mechanical configuration, the student should be able to isolate an
-appropriate body or system, draw a free-body diagram, select useful axes, and
-write the corresponding equations of motion.
+Given a mechanical configuration, the student should be able to isolate an appropriate body or
+system, draw a free-body diagram, choose useful axes, and write the corresponding equations of
+motion.
 
-\section*{Stage III: work, energy, and potential}
+\section{Stage C: work, energy, and potentials}
 
-Newton's laws give a local description of dynamics through acceleration.  Work
-and energy often provide a more direct global description between two states.
-For a particle acted on by a force \(\mathbf F\),
+Newton's laws give a local description through acceleration.  Work and energy often provide a more
+direct global description between two states.  For a particle acted on by a force $\mathbf F$,
 \[
 W_{1\to2}=\int_1^2 \mathbf F\cdot d\mathbf r.
 \]
 The net work satisfies the work--energy theorem
 \[
 W_{\mathrm{net}}=\Delta T,
-\]
-where the translational kinetic energy is
-\[
+\qquad
 T=\frac12 mv^2.
 \]
 
-For a conservative force, a potential energy \(U\) may be introduced so that
+For a conservative force a potential energy $U$ may be introduced so that
 \[
 \mathbf F=-\nabla U.
 \]
@@ -205,14 +231,10 @@ In one dimension,
 \[
 F_x=-\frac{dU}{dx}.
 \]
-When only conservative forces do work, the mechanical energy
-\[
-E=T+U
-\]
-is constant.
+When only conservative forces do work, the mechanical energy $E=T+U$ is constant.
 
-Potential-energy diagrams introduce turning points and stability.  An equilibrium
-position \(q_0\) satisfies
+Potential-energy diagrams introduce turning points and stability.  An equilibrium position $q_0$
+satisfies
 \[
 \left.\frac{dU}{dq}\right|_{q_0}=0,
 \]
@@ -220,47 +242,31 @@ and a one-dimensional equilibrium is stable when
 \[
 \left.\frac{d^2U}{dq^2}\right|_{q_0}>0.
 \]
-This local quadratic structure later becomes the basis of small-oscillation
-theory.
 
-\paragraph{Checkpoint.}
-The student should be able to decide whether a problem is best solved by force
-balance, the work--energy theorem, or conservation of mechanical energy.
+\section{Stage D: momentum and systems of particles}
 
-\section*{Stage IV: momentum and systems of particles}
-
-Linear momentum is
+Linear momentum is $\mathbf p=m\mathbf v$ for a particle of constant mass.  Integrating Newton's
+second law over time gives the impulse--momentum relation
 \[
-\mathbf p=m\mathbf v
+\mathbf J=\int_{t_1}^{t_2}\mathbf F\,dt=\Delta\mathbf p.
 \]
-for a particle of constant mass.  Integrating Newton's second law over time gives
-the impulse--momentum relation
-\[
-\mathbf J=\int_{t_1}^{t_2}\mathbf F\,dt
-          =\Delta\mathbf p.
-\]
+For an isolated system, total linear momentum is conserved.  This is the natural tool for collisions
+and explosions.
 
-For an isolated system, total linear momentum is conserved.  This principle is
-the natural tool for collisions and explosions.  Both one- and two-dimensional
-collisions should be studied, including elastic and inelastic limits.
-
-For a system of particles of total mass \(M\), the center of mass is
+For a system of particles of total mass $M$, the center of mass is
 \[
 \mathbf R=\frac{1}{M}\sum_i m_i\mathbf r_i,
 \]
-with the continuous-distribution analogue obtained by replacing the sum by an
-integral.  The motion of the center of mass obeys
+and its motion obeys
 \[
 M\ddot{\mathbf R}=\sum \mathbf F_{\mathrm{ext}}.
 \]
-This is the first important demonstration that an appropriate system boundary can
-eliminate internal forces from the equations of motion.
+This demonstrates that an appropriate system boundary can eliminate internal forces from the
+equations of motion.
 
-\section*{Stage V: elementary rotational mechanics}
+\section{Stage E: elementary rotational mechanics}
 
-Fixed-axis rotation parallels translational mechanics.  The angular variables
-\(\theta\), \(\omega\), and \(\alpha\) correspond to position, velocity, and
-acceleration.  Torque is
+Fixed-axis rotation parallels translational mechanics.  Torque is
 \[
 \boldsymbol\tau=\mathbf r\times\mathbf F,
 \]
@@ -268,71 +274,42 @@ and for a rigid body rotating about a fixed principal axis,
 \[
 \sum\tau=I\alpha.
 \]
-
-The moment of inertia is the rotational measure of mass distribution,
+The moment of inertia is
 \[
-I=\int r_\perp^2\,dm.
+I=\int r_\perp^2\,dm,
 \]
-The rotational kinetic energy about a fixed axis is
+and the rotational kinetic energy is
 \[
 T_{\mathrm{rot}}=\frac12 I\omega^2.
 \]
-
-Angular momentum is
-\[
-\mathbf L=\mathbf r\times\mathbf p
-\]
-for a particle, and torque gives its rate of change,
+Angular momentum satisfies
 \[
 \frac{d\mathbf L}{dt}=\boldsymbol\tau_{\mathrm{ext}}.
 \]
-Rolling without slipping combines translation and rotation through the
-constraint
+Rolling without slipping combines translation and rotation through
 \[
 v_{\mathrm{cm}}=R\omega.
 \]
 
-This stage should include the parallel-axis theorem, rotational work and power,
-static equilibrium, and conservation of angular momentum.
+\section{Stage F: gravitation and central forces}
 
-\paragraph{Checkpoint.}
-The student should be able to move fluently between translational and rotational
-analogues and to recognize when angular momentum is the simplest conserved
-quantity.
-
-\section*{Stage VI: gravitation and orbital mechanics}
-
-Newtonian gravitation provides the first major application in which energy,
-angular momentum, and central forces work together.  For point masses,
+Newtonian gravitation provides a major application in which energy and angular momentum work
+together.  For point masses,
 \[
-\mathbf F=-\frac{G M m}{r^2}\,\hat{\mathbf r},
+\mathbf F=-\frac{GMm}{r^2}\hat{\mathbf r},
+\qquad
+U(r)=-\frac{GMm}{r}.
 \]
-and the gravitational potential energy is
-\[
-U(r)=-\frac{G M m}{r}.
-\]
-
-Introductory study should include the gravitational field, escape speed, circular
-orbits, orbital energy, and Kepler's laws.  A circular orbit about a mass \(M\)
-has speed
-\[
-v=\sqrt{\frac{GM}{r}}
-\]
-and period
-\[
-T=2\pi\sqrt{\frac{r^3}{GM}}
-\]
-when the orbiting mass is negligible compared with \(M\).
-
-At the analytical-mechanics level, the two-body problem is reduced to one body
-with the reduced mass
+Introductory study should include the gravitational field, escape speed, circular orbits, orbital
+energy, and Kepler's laws.  At the analytical-mechanics level, the two-body problem is reduced to
+one body with reduced mass
 \[
 \mu=\frac{m_1m_2}{m_1+m_2}.
 \]
-Conservation of angular momentum confines central-force motion to a plane and
-leads naturally to the effective-potential method and the orbit equation.
+Conservation of angular momentum confines central-force motion to a plane and leads naturally to
+effective potentials, orbit equations, and scattering.
 
-\section*{Stage VII: oscillations}
+\section{Stage G: oscillations}
 
 The simple harmonic oscillator is a prototype for linear dynamics.  For
 \[
@@ -346,403 +323,280 @@ and the motion may be written
 \[
 x(t)=A\cos(\omega_0 t+\phi).
 \]
+The introductory sequence should include oscillator energy, the simple pendulum, damping, forced
+motion, resonance, phase, bandwidth, and the quality factor.  The next step is coupled oscillation
+and normal modes.
 
-The introductory sequence should include oscillator energy, the simple pendulum,
-damping, forced motion, resonance, phase, bandwidth, and the quality factor.
-The next step is coupled oscillation and normal modes.
+\section{Stage H: elementary fluids and elasticity}
 
-Near a stable equilibrium, many nonlinear systems can be approximated by a
-quadratic potential.  This is why harmonic motion appears throughout mechanics,
-molecular physics, structures, waves, and field theory.
+Elementary fluids are part of a complete undergraduate mechanics foundation.  The sequence should
+include density, pressure, hydrostatic equilibrium, Pascal's principle, Archimedes' principle, the
+continuity equation, Bernoulli's equation, viscosity, and elementary pipe flow.
 
-\section*{Stage VIII: elementary fluid mechanics and elasticity}
-
-Elementary fluids are part of a complete undergraduate mechanics foundation.
-The sequence should include density, pressure, hydrostatic equilibrium, Pascal's
-principle, Archimedes' principle, the continuity equation, Bernoulli's equation,
-viscosity, and elementary pipe flow.
-
-For a static fluid of density \(\rho\) in a uniform gravitational field,
+For a static fluid of density $\rho$ in a uniform gravitational field,
 \[
 \frac{dp}{dz}=-\rho g.
 \]
-For steady incompressible flow through a stream tube,
+For steady incompressible flow,
 \[
 A_1v_1=A_2v_2.
 \]
-Along a streamline for an ideal incompressible fluid under the usual Bernoulli
-assumptions,
+Along a streamline for an ideal incompressible fluid under the usual Bernoulli assumptions,
 \[
 p+\frac12\rho v^2+\rho gz=\text{constant}.
 \]
+Elasticity provides a bridge from particle mechanics to continuum mechanics through stress, strain,
+elastic moduli, and elastic energy.
 
-Elasticity provides a bridge from particle mechanics to continuum mechanics
-through stress, strain, elastic moduli, and elastic energy.
+\section{Stage I: generalized coordinates and constraints}
 
-\section*{Stage IX: generalized coordinates and constraints}
+Analytical mechanics begins by asking what coordinates actually describe the independent motion of
+a system.  A set of generalized coordinates $q_1,\ldots,q_n$ specifies the configuration using the
+number of independent variables required by the constraints.
 
-Analytical mechanics begins by asking what coordinates actually describe the
-independent motion of the system.  A set of generalized coordinates
-\(q_1,\ldots,q_n\) specifies the configuration using the number of independent
-variables required by the constraints.
+Important distinctions include holonomic and nonholonomic constraints and scleronomic and rheonomic
+constraints.  Virtual displacements and d'Alembert's principle explain how ideal constraint forces
+can often be eliminated from the equations.
 
-Important distinctions include holonomic and nonholonomic constraints and
-scleronomic and rheonomic constraints.  Virtual displacements and d'Alembert's
-principle explain how ideal constraint forces can often be eliminated from the
-equations.
-
-The transition from Cartesian coordinates to generalized coordinates is not
-merely a change of notation.  It is a systematic way to build the geometry of the
-constraints into the description of the system.
-
-\section*{Stage X: variational and Lagrangian mechanics}
+\section{Stage J: variational and Lagrangian mechanics}
 
 For many mechanical systems the Lagrangian is
 \[
 L(q_i,\dot q_i,t)=T-U.
 \]
-The action is the functional
+The action is
 \[
 S[q]=\int_{t_1}^{t_2}L(q_i,\dot q_i,t)\,dt.
 \]
-Hamilton's principle states that the physical path makes the action stationary
-with respect to admissible variations whose endpoints are fixed.  The resulting
-Euler--Lagrange equations are
+Hamilton's principle leads to the Euler--Lagrange equations
 \[
 \frac{d}{dt}\left(\frac{\partial L}{\partial \dot q_i}\right)
 -\frac{\partial L}{\partial q_i}=0.
 \]
-
-A complete upper-undergraduate treatment should include generalized forces,
-Lagrange multipliers, generalized momentum,
+A complete upper-undergraduate treatment should include generalized forces, Lagrange multipliers,
+generalized momentum,
 \[
 p_i=\frac{\partial L}{\partial\dot q_i},
 \]
-cyclic coordinates, first integrals, and the relation between continuous
-symmetries and conservation laws expressed by Noether's theorem.
+cyclic coordinates, first integrals, and Noether's theorem.
 
-\paragraph{Checkpoint.}
-Given a constrained mechanical system, the student should be able to select useful
-generalized coordinates, construct \(T\) and \(U\), form \(L=T-U\), and derive
-the equations of motion.
+\section{Stage K: non-inertial reference frames}
 
-\section*{Stage XI: non-inertial reference frames}
-
-The derivative of a vector depends on the rotating frame in which it is
-measured.  If a frame rotates with angular velocity \(\boldsymbol\Omega\), then
+If a frame rotates with angular velocity $\boldsymbol\Omega$, derivatives measured in inertial and
+rotating frames are related by the transport theorem
 \[
-\left(\frac{d\mathbf A}{dt}\right)_{I}
+\left(\frac{d\mathbf A}{dt}\right)_I
 =
-\left(\frac{d\mathbf A}{dt}\right)_{R}
+\left(\frac{d\mathbf A}{dt}\right)_R
 +\boldsymbol\Omega\times\mathbf A.
 \]
-Applying this relation to position and velocity produces the centrifugal,
-Coriolis, and Euler acceleration terms.  This material is important both for
-advanced particle dynamics and for rigid-body mechanics.
+Applying the relation twice to position yields the centrifugal, Coriolis, and Euler terms that
+appear in rotating-frame dynamics.  This topic is important for terrestrial motion, navigation,
+geophysical dynamics, and rigid-body mechanics.
 
-Applications include motion on the rotating Earth, the Foucault pendulum,
-rotating machinery, and navigation.
+\section{Stage L: central-force mechanics and scattering}
 
-\section*{Stage XII: central forces and scattering}
-
-For a central potential \(U(r)\), conservation of angular momentum reduces the
-radial dynamics to motion in an effective potential,
+Central-force motion combines conservation of energy and angular momentum with the effective
+potential
 \[
-U_{\mathrm{eff}}(r)
-=U(r)+\frac{L^2}{2\mu r^2}.
+U_{\mathrm{eff}}(r)=U(r)+\frac{L^2}{2\mu r^2}.
 \]
-This representation reveals radial turning points and the stability of circular
-orbits.
+The progression should continue through the orbit equation, the Kepler problem, orbit stability,
+impact parameter, scattering angle, differential cross section, and Rutherford scattering.
 
-The central-force sequence should continue through the orbit equation, the Kepler
-problem, the Laplace--Runge--Lenz vector as an advanced symmetry, and classical
-scattering.  Scattering introduces the impact parameter, scattering angle, and
-differential cross section.
+\section{Stage M: small oscillations and normal modes}
 
-\section*{Stage XIII: small oscillations and normal modes}
-
-For small displacements \(\boldsymbol\eta\) about stable equilibrium, a broad
-class of systems reduces to
+Near stable equilibrium, many systems can be linearized.  With generalized displacements
+$\boldsymbol\eta$,
 \[
-\mathbf M\ddot{\boldsymbol\eta}
-+\mathbf K\boldsymbol\eta=0,
+\mathbf M\ddot{\boldsymbol\eta}+\mathbf K\boldsymbol\eta=0,
 \]
-where \(\mathbf M\) is the mass matrix and \(\mathbf K\) is the stiffness matrix.
-Seeking harmonic solutions gives the generalized eigenvalue problem
+which leads to the generalized eigenvalue problem
 \[
-\det\left(\mathbf K-\omega^2\mathbf M\right)=0.
+\det(\mathbf K-\omega^2\mathbf M)=0.
 \]
-The eigenvectors are the normal modes and the corresponding eigenvalues determine
-the normal frequencies.
+Normal modes provide a bridge from a single oscillator to molecular vibration, structural dynamics,
+waves, and field modes.
 
-This subject connects ordinary oscillators to molecular vibration, structural
-dynamics, lattice models, and the continuum limit.
+\section{Stage N: three-dimensional rigid-body mechanics}
 
-\section*{Stage XIV: three-dimensional rigid-body dynamics}
-
-A rigid body has both translational and rotational degrees of freedom.  The
-advanced rotational sequence is
+The rigid-body sequence should proceed through rotation representation, angular velocity, inertia
+tensor, principal axes, angular momentum, Euler's equations, torque-free motion, precession, and
+nutation.  In general,
 \[
-\begin{array}{c}
-\text{rotation representation}
-\longrightarrow
-\boldsymbol\omega
-\longrightarrow
-\mathbf I
-\longrightarrow
-\mathbf L=\mathbf I\boldsymbol\omega
-\\[3pt]
-\longrightarrow
-\text{Euler equations}
-\longrightarrow
-\text{precession and nutation}.
-\end{array}
+\mathbf L=\mathbf I\boldsymbol\omega,
 \]
+and $\mathbf L$ need not be parallel to $\boldsymbol\omega$.
 
-Direction cosine matrices, Euler angles, axis--angle coordinates, and quaternions
-are alternative representations of attitude.  They should be studied after the
-physical meaning of torque, angular momentum, and inertia has been established.
+\section{Stage O: Hamiltonian mechanics}
 
-The inertia tensor is diagonal in principal-axis coordinates.  In a body-fixed
-principal-axis frame, Euler's equations relate applied torque to the components of
-angular velocity.  Torque-free motion, the intermediate-axis instability,
-symmetric tops, precession, and nutation form the standard advanced rigid-body
-sequence.
-
-\section*{Stage XV: Hamiltonian mechanics}
-
-The canonical momentum is
+Canonical momenta are defined by
 \[
 p_i=\frac{\partial L}{\partial\dot q_i}.
 \]
-When the Legendre transformation is regular, the Hamiltonian is
+A Legendre transform gives the Hamiltonian
 \[
-H(q_i,p_i,t)=\sum_i p_i\dot q_i-L.
+H(q,p,t)=\sum_i p_i\dot q_i-L,
 \]
-Hamilton's equations are
+and Hamilton's equations are
 \[
 \dot q_i=\frac{\partial H}{\partial p_i},
 \qquad
 \dot p_i=-\frac{\partial H}{\partial q_i}.
 \]
+The conceptual shift is from configuration-space second-order dynamics to phase-space first-order
+dynamics.
 
-The conceptual transition is from second-order dynamics in configuration space to
-first-order dynamics in phase space.  For a system with \(n\) degrees of freedom,
-phase space has \(2n\) canonical coordinates \((q_i,p_i)\).
+\section{Stage P: Poisson and symplectic mechanics}
 
-The next topics are Poisson brackets, constants of motion, canonical variables,
-Liouville's theorem, and the symplectic structure of Hamiltonian flow.  For
-functions \(f(q,p,t)\) and \(g(q,p,t)\), the Poisson bracket is
+For functions $f(q,p,t)$ and $g(q,p,t)$, the Poisson bracket is
 \[
-\{f,g\}
-=\sum_i\left(
+\{f,g\}=\sum_i
+\left(
 \frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}
--\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}
+-
+\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}
 \right).
 \]
+Poisson brackets package Hamiltonian time evolution, canonical structure, generators, and
+conservation laws.  Liouville's theorem and symplectic geometry then reveal structural properties of
+Hamiltonian flow.
 
-\section*{Stage XVI: graduate classical dynamics}
+\section{Stage Q: canonical transformations}
 
-A graduate sequence at approximately the level of a standard advanced mechanics
-text should proceed from Hamiltonian mechanics into the following subjects.
+A canonical transformation changes phase-space variables while preserving Hamilton's form of the
+equations.  Generating functions provide a systematic method for constructing these transformations.
 
-\subsection*{Canonical transformations}
+\section{Stage R: Hamilton--Jacobi theory}
 
-Canonical transformations change the phase-space variables while preserving
-Hamilton's form of the equations.  Generating functions provide a systematic
-method for constructing them.  Infinitesimal canonical transformations connect
-naturally to Poisson brackets and symmetry generators.
-
-\subsection*{Hamilton--Jacobi theory}
-
-The Hamilton--Jacobi equation is
+Hamilton--Jacobi theory seeks a canonical transformation that makes the transformed dynamics as
+simple as possible.  Its central equation is
 \[
 H\left(q_i,\frac{\partial S}{\partial q_i},t\right)
 +\frac{\partial S}{\partial t}=0.
 \]
-It reframes mechanics as a first-order partial differential equation and provides
-an important bridge to geometrical optics and quantum mechanics.
+This theory also provides a conceptual bridge to geometrical optics and quantum mechanics.
 
-\subsection*{Action--angle variables}
+\section{Stage S: action-angle variables and perturbation theory}
 
-For integrable periodic systems, action--angle variables make the Hamiltonian a
-function of the action variables alone.  They provide a natural language for
-fundamental frequencies, adiabatic invariants, and perturbation theory.
+For integrable periodic systems, action-angle variables turn the motion into especially simple
+canonical evolution.  They provide a natural language for adiabatic invariants and a convenient
+starting point for perturbation theory in nearly integrable systems.
 
-\subsection*{Perturbation theory and nonlinear dynamics}
+\section{Stage T: nonlinear dynamics and chaos}
 
-Near-integrable Hamiltonian systems lead to canonical perturbation theory,
-averaging, and secular terms.  More general nonlinear systems introduce phase
-portraits, fixed points, stability, bifurcations, Poincare sections, and
-deterministic chaos.
+Important ideas include fixed points, local stability, bifurcations, phase portraits, Poincare
+sections, sensitivity to initial conditions, and deterministic chaos.  These topics show where the
+simple picture of globally integrable motion breaks down and why qualitative and computational
+methods become essential.
 
-\subsection*{Continuous systems and fields}
+\section{Stage U: continuous systems and fields}
 
-The variational formulation extends from finitely many coordinates to fields.  A
-field action has the form
+The variational structure of particle mechanics extends naturally to continuous systems.  Instead
+of a finite-dimensional Lagrangian one introduces a Lagrangian density $\mathcal L$ and an action
 \[
-S=\int \mathcal L(\phi,\partial_\mu\phi,x)\,d^4x,
+S=\int \mathcal L(\phi,\partial_\mu\phi,x)\,d^4x.
 \]
-and the field Euler--Lagrange equations provide a bridge to strings, elastic
-continua, fluids, and classical field theory.
+The resulting field Euler--Lagrange equations provide a bridge from discrete mechanics to strings,
+elastic media, fluids, and classical field theory.
 
-\section*{GRE Physics mechanics checklist}
+\section{GRE mechanics checklist}
 
-The GRE Physics Subject Test treats classical mechanics as a substantial part of
-the examination.  A mechanics review should include at least the following
-subjects:
-\begin{itemize}
-\item kinematics;
-\item Newton's laws;
-\item work and energy;
+A student preparing specifically for the Physics Subject Test should verify competence in:
+\begin{enumerate}
+\item kinematics in one, two, and three dimensions;
+\item Newton's laws and force modeling;
+\item work, energy, and power;
+\item linear momentum, impulse, and systems of particles;
 \item oscillatory motion;
-\item fixed-axis rotational motion;
-\item systems of particles and conservation of momentum;
-\item central forces and celestial mechanics;
+\item rotational motion about a fixed axis;
+\item angular momentum and torque;
+\item central forces, gravitation, and celestial mechanics;
 \item three-dimensional particle dynamics;
-\item introductory Lagrangian and Hamiltonian mechanics;
+\item Lagrangian and Hamiltonian formalism;
 \item non-inertial reference frames;
 \item elementary fluid dynamics.
-\end{itemize}
-
-For timed preparation, each subject should be practiced at several levels:
-conceptual recognition, one- or two-step calculation, scaling and dimensional
-analysis, conservation-law shortcuts, graph interpretation, and limiting-case
-reasoning.  Long derivations are essential for learning, but they should be
-supplemented by short problems that train rapid identification of the governing
-principle.
-
-\section*{A dependency map in words}
-
-The main prerequisite relations can be summarized as follows.
-\begin{enumerate}
-\item Vectors and calculus lead to kinematics.
-\item Kinematics and force modeling lead to Newtonian dynamics.
-\item Newtonian dynamics leads to work--energy methods and momentum methods.
-\item Energy and momentum together lead naturally to rotational mechanics and
-systems of particles.
-\item Rotation and energy support gravitation, orbital mechanics, and elementary
-oscillation theory.
-\item Newtonian mechanics plus coordinate methods lead to generalized coordinates
-and constraints.
-\item Generalized coordinates plus variational calculus lead to Lagrangian
-mechanics.
-\item Lagrangian mechanics supports non-inertial dynamics, central-force theory,
-small oscillations, and advanced rigid-body dynamics.
-\item A Legendre transformation of a regular Lagrangian leads to Hamiltonian
-mechanics.
-\item Hamiltonian mechanics leads to Poisson brackets, canonical transformations,
-Hamilton--Jacobi theory, action--angle variables, perturbation theory, and modern
-nonlinear dynamics.
 \end{enumerate}
 
-\section*{Recommended study method}
+GRE preparation rewards both understanding and speed.  Students should therefore practice not only
+full derivations but also dimensional reasoning, limiting cases, ratio arguments, conservation-law
+shortcuts, and rapid recognition of standard equations.
 
-A useful mechanics study cycle has five parts.
+\section{Recommended study method}
 
-\paragraph{Physical model.}
-Identify the system, degrees of freedom, interactions, reference frame,
-constraints, and likely conservation laws before manipulating equations.
+For each major topic, use a five-pass cycle.
+\begin{enumerate}
+\item Identify the physical system, degrees of freedom, interactions, constraints, and likely conservation laws.
+\item Work through the governing derivation instead of memorizing an isolated formula.
+\item Reproduce worked examples without looking at intermediate steps.
+\item Solve conceptual, numerical, derivational, and computational exercises.
+\item For GRE-relevant material, add short timed problems emphasizing recognition and efficient reasoning.
+\end{enumerate}
 
-\paragraph{Derivation.}
-Work through the origin of the governing equation.  Equations such as Newton's
-second law, the work--energy theorem, Bernoulli's equation, the Euler--Lagrange
-equations, and Hamilton's equations should not be treated as unrelated formulas.
+Reading alone is not evidence of mastery.  The important skill is the ability to set up and solve a
+new problem whose surface description differs from previously seen examples.
 
-\paragraph{Worked examples.}
-Reproduce a worked example without looking at intermediate steps, and then change
-one assumption to test whether the method is understood rather than memorized.
+\section{Milestones}
 
-\paragraph{Exercises.}
-Use a mixture of conceptual, computational, derivational, and numerical problems.
-Computation becomes increasingly valuable for nonlinear oscillation, orbital
-mechanics, coupled systems, and rigid-body dynamics.
+\subsection*{Milestone 1: introductory particle mechanics}
+The student can translate among words, graphs, and equations of motion; draw correct free-body
+diagrams; solve Newton's-law problems; use energy and momentum appropriately; and analyze collisions
+and center-of-mass motion.
 
-\paragraph{Timed review.}
-For examination preparation, add short timed problems that emphasize recognition,
-scaling, conservation laws, dimensions, and limiting cases.
+\subsection*{Milestone 2: rotation, gravitation, oscillations, and fluids}
+The student can solve fixed-axis rotational dynamics; use torque and angular momentum; analyze
+rolling; solve elementary orbit problems; analyze harmonic oscillators, damping, and resonance; and
+solve introductory hydrostatics, continuity, and Bernoulli problems.
 
-Progress should be judged by the ability to set up an unfamiliar problem, not by
-the number of pages read.
+\subsection*{Milestone 3: analytical mechanics}
+The student can identify degrees of freedom and constraints, choose useful generalized coordinates,
+derive Lagrange's equations, use generalized momenta and cyclic coordinates, and analyze central
+forces, non-inertial frames, and small oscillations.
 
-\section*{Milestones}
+\subsection*{Milestone 4: rigid-body and Hamiltonian mechanics}
+The student can use the inertia tensor and principal axes, formulate Euler's rigid-body equations,
+construct a Hamiltonian, use Hamilton's equations, interpret phase space, and compute basic Poisson
+brackets.
 
-\subsection*{Introductory particle mechanics}
+\subsection*{Milestone 5: graduate mechanics}
+The student can work with canonical transformations and generating functions, solve representative
+Hamilton--Jacobi problems, use action-angle variables, understand perturbative and nonlinear
+departures from integrability, and connect discrete mechanics to continuum or field formulations.
 
-A student completing this level should be able to translate motion among words,
-graphs, and equations; draw correct free-body diagrams; solve Newton's-law
-problems in one and two dimensions; use energy and momentum appropriately; and
-analyze collisions and center-of-mass motion.
+\section{Source and licensing note}
 
-\subsection*{Introductory rotation, gravitation, oscillation, and fluids}
-
-A student completing this level should be able to solve fixed-axis rotational
-dynamics, use torque and angular momentum, analyze rolling, solve elementary
-orbit problems, solve simple damping and resonance problems, and use hydrostatics,
-continuity, and Bernoulli's equation.
-
-\subsection*{Analytical mechanics}
-
-A student completing this level should be able to identify degrees of freedom and
-constraints, select generalized coordinates, derive Lagrange's equations, use
-cyclic coordinates and generalized momentum, and analyze representative central
-force, non-inertial, normal-mode, and rigid-body problems.
-
-\subsection*{Hamiltonian mechanics}
-
-A student completing this level should be able to construct a Hamiltonian, use
-Hamilton's equations, work in phase space, compute basic Poisson brackets, and
-explain the structural meaning of phase-space volume conservation.
-
-\subsection*{Graduate mechanics}
-
-A student completing the advanced path should be able to use canonical
-transformations and generating functions, solve representative Hamilton--Jacobi
-problems, use action--angle variables, understand perturbative and nonlinear
-departures from integrability, and connect discrete mechanics to continuum and
-field formulations.
-
-\section*{Source and licensing note}
-
-This entry is an original synthesis for PhysicsLibrary.  Its pedagogical
-organization was checked against several openly licensed mechanics curricula.
-No external figures are reproduced in this entry.
-
-The introductory sequence was informed in part by Tom Weideman's
-\emph{UCD Physics 9A -- Classical Mechanics}, distributed through Physics
-LibreTexts under the Creative Commons Attribution--ShareAlike 4.0 International
-license.  The advanced sequence was checked against the Wikibooks
-\emph{Classical Mechanics} project, whose text is available under Creative
-Commons Attribution--ShareAlike terms subject to page-specific notices.  The
-archived 2016 edition of \emph{University Physics, Volume 1} was used as a
-cross-check for introductory mechanics, oscillations, and fluids; that archived
-edition states a Creative Commons Attribution 4.0 license except where otherwise
-noted.
-
-The GRE topic list is used only to identify examination scope.  No proprietary GRE
-questions are reproduced here.
+This learning path is an original synthesis prepared for PhysicsLibrary.  Its ordering has been
+cross-checked against openly licensed university mechanics resources and against the topic scope of
+the GRE Physics Subject Test.
 
 \begin{thebibliography}{9}
 
-\bibitem{weideman}
+\bibitem{UCD9A}
 T. Weideman,
 \emph{UCD Physics 9A -- Classical Mechanics}, Physics LibreTexts.
-\PMlinkexternal{UCD Physics 9A -- Classical Mechanics}{https://phys.libretexts.org/Courses/University_of_California_Davis/UCD:_Classical_Mechanics}.
+The resource is distributed under a Creative Commons Attribution--ShareAlike license.
+\PMlinkexternal{UCD Physics 9A}{https://phys.libretexts.org/Courses/University_of_California_Davis/UCD:_Classical_Mechanics}
 
-\bibitem{wikibooks}
+\bibitem{WikibooksCM}
 Wikibooks contributors,
 \emph{Classical Mechanics}.
-\PMlinkexternal{Wikibooks Classical Mechanics}{https://en.wikibooks.org/wiki/Classical_Mechanics}.
+Wikibooks text is generally distributed under the Creative Commons Attribution--ShareAlike 4.0
+license, subject to page-specific notices.
+\PMlinkexternal{Wikibooks Classical Mechanics}{https://en.wikibooks.org/wiki/Classical_Mechanics}
 
-\bibitem{openstax2016}
+\bibitem{OpenStax2016}
 OpenStax,
-\emph{University Physics, Volume 1}, archived 2016 edition distributed through
-BCcampus Pressbooks.
-\PMlinkexternal{Archived University Physics Volume 1}{https://pressbooks.bccampus.ca/universityphysicssandboxbook1/}.
+\emph{University Physics, Volume 1}, archived 2016 release.
+The archived edition states a Creative Commons Attribution 4.0 license except where otherwise noted.
+\PMlinkexternal{Archived University Physics Volume 1}{https://pressbooks.bccampus.ca/universityphysicssandboxbook1/}
 
-\bibitem{ets}
+\bibitem{ETS}
 Educational Testing Service,
 \emph{GRE Physics Subject Test: Content and Structure}.
-\PMlinkexternal{GRE Physics content and structure}{https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html}.
+Used only to identify the scope and weighting of the classical-mechanics portion of the examination.
+\PMlinkexternal{GRE Physics Subject Test content}{https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html}
 
 \end{thebibliography}
+
+Unless otherwise noted, this PhysicsLibrary entry is intended for release under the Creative Commons
+Attribution--ShareAlike 4.0 International license.
