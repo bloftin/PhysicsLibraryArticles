@@ -1,0 +1,878 @@
+% PhysicsLibrary submission source
+% Suggested title: Free-body diagram
+% Suggested entry type: Definition
+% Suggested primary PACS classification: 45.20.Dd (Newtonian mechanics)
+% Suggested additional classification: 45.50.Dd (General motion)
+% Suggested synonyms: free body diagram, force diagram, FBD
+% Suggested defines: system boundary, external force, internal force
+% Suggested keywords: Newton's laws, force, free-body diagram, normal force,
+% friction, tension, spring force, drag force, equilibrium, circular motion
+% License intent: CC BY-SA 4.0
+
+A \emph{free-body diagram} is a diagram in which a chosen body or system is
+isolated from its surroundings and every relevant \emph{external} force acting on
+that body or system is represented by a vector.  The free-body diagram is the
+principal bridge between a physical description and Newton's equations of motion.
+
+The important word in the definition is \emph{chosen}.  Before drawing force
+arrows, one must decide what object or collection of objects is the system.  A
+force is external or internal only relative to that system boundary.  A force that
+must appear when one object is isolated may disappear from the equations when two
+interacting objects are treated as one larger system.
+
+For a particle or translating rigid body of constant mass, the free-body diagram
+is converted into the vector equation
+\[
+\sum \mathbf F_{\mathrm{ext}}=m\mathbf a.
+\]
+For a rigid body, the same diagram also supplies the forces and moment arms used in
+rotational dynamics,
+\[
+\sum \boldsymbol\tau_O
+=\frac{d\mathbf L_O}{dt},
+\]
+or, in the appropriate fixed-axis special case,
+\[
+\sum \tau=I\alpha.
+\]
+Thus a good free-body diagram is not decorative; it is a compact statement of the
+physical model.
+
+\section*{System boundary}
+
+The first step in a mechanics problem is to state what is being modeled.  A
+\emph{system boundary} separates the chosen system from everything else.  Forces
+exerted across the boundary by the surroundings are external forces and belong on
+the free-body diagram.  Forces between parts of the chosen system are internal and
+normally do not appear on a free-body diagram of the whole system.
+
+For example, consider two blocks in contact on a horizontal table.  If only the
+left block is selected, the contact force exerted by the right block must appear.
+If both blocks are selected as one system, the mutual contact forces are internal
+and do not appear in the system free-body diagram.
+
+This observation is one of the most useful problem-solving tools in mechanics:
+choose a system boundary that removes forces that are not needed for the desired
+quantity.
+
+\section*{A seven-step construction procedure}
+
+A reliable free-body diagram can be constructed by the following sequence.
+
+\begin{enumerate}
+\item \emph{Choose the system.} State explicitly whether the system is one
+particle, one rigid body, or several bodies treated together.
+
+\item \emph{Sketch the isolated body or replace it by a point.} For particle
+translation, a point or simple box is usually sufficient.  Preserve the actual
+shape when lines of action and torques matter.
+
+\item \emph{Identify every interaction crossing the system boundary.} Typical
+interactions are gravity, contact with a surface, strings or cables, springs,
+fluids, and externally applied pushes or pulls.
+
+\item \emph{Replace each interaction by a force vector.} Draw the force on the
+chosen system, not the force exerted by the chosen system on something else.
+
+\item \emph{Label the forces by physical origin.} Labels such as \(m\mathbf g\),
+\(\mathbf N\), \(\mathbf T\), \(\mathbf f\), and \(\mathbf F_s\) are better than
+labels such as ``up'' or ``left'' because the former identify interactions.
+
+\item \emph{Choose coordinate axes.} Axes should simplify the component equations.
+On an incline, axes parallel and perpendicular to the surface are usually better
+than horizontal and vertical axes.
+
+\item \emph{Write Newton's equations only after the diagram is complete.} The
+component equations should be a translation of the diagram, not a substitute for
+it.
+\end{enumerate}
+
+A useful final question is: ``For every force arrow, what object in the
+surroundings exerts this force on the chosen system?''  If that question cannot be
+answered, the arrow may not represent a real interaction.
+
+\section*{Forces commonly appearing on free-body diagrams}
+
+\subsection*{Weight}
+
+Near the surface of the Earth, the weight of a body of mass \(m\) is
+\[
+\mathbf W=m\mathbf g,
+\]
+directed approximately toward the center of the Earth.  Weight acts whether or
+not the body is in contact with a surface.
+
+Weight should not be replaced by its components until coordinates have been
+selected.  On an incline of angle \(\theta\), if the axes are parallel and
+perpendicular to the plane, the components have magnitudes
+\[
+mg\sin\theta
+\qquad\text{and}\qquad
+mg\cos\theta,
+\]
+but these components are not additional forces.  The free-body diagram contains
+one gravitational force, \(m\mathbf g\).
+
+\subsection*{Normal force}
+
+A normal force is a contact force perpendicular to a surface.  Its magnitude is
+not automatically equal to \(mg\).  It must be determined from the equations of
+motion and the geometry of the contact.
+
+For a block on a horizontal surface with no other vertical forces and zero vertical
+acceleration,
+\[
+N=mg.
+\]
+For a block on an incline with no other force normal to the plane,
+\[
+N=mg\cos\theta.
+\]
+If another applied force has a vertical component or if the body has vertical
+acceleration, the normal force changes accordingly.
+
+\subsection*{Tension}
+
+An ideal flexible string or cable pulls along its own direction.  A tension force
+on a body therefore points away from the body along the string.  In the common
+ideal model of a massless string over frictionless massless pulleys, the tension
+magnitude is the same throughout a continuous string.  Real ropes and pulleys do
+not always satisfy this idealization.
+
+\subsection*{Friction}
+
+Friction acts tangentially to a contact surface and opposes relative sliding or the
+\emph{tendency} to slide.  Static friction satisfies
+\[
+|f_s|\leq \mu_s N,
+\]
+whereas the common kinetic-friction model is
+\[
+f_k=\mu_k N.
+\]
+
+The expression \(f_s=\mu_s N\) is true only at impending slip.  In a static
+problem the actual static-friction magnitude is normally found from the equations
+of equilibrium and then checked against the inequality.
+
+\subsection*{Spring force}
+
+For an ideal linear spring,
+\[
+\mathbf F_s=-k\mathbf x,
+\]
+where \(\mathbf x\) is the displacement of the spring end from its equilibrium
+position along the spring axis.  The minus sign means that the force is restoring.
+
+\subsection*{Drag and fluid resistance}
+
+A drag force is opposite the velocity relative to the surrounding fluid in common
+isotropic models.  Two frequently used approximations are
+\[
+\mathbf F_d=-b\mathbf v
+\]
+for linear drag and
+\[
+\mathbf F_d=-c|\mathbf v|\mathbf v
+\]
+for quadratic drag.  The appropriate model depends on the flow regime and the
+body.
+
+\subsection*{Applied forces}
+
+A push or pull supplied by an external agent may be represented by an applied
+force \(\mathbf F\).  If its direction is oblique to the coordinate axes, the
+vector can later be resolved into components.  Components should not be drawn in
+addition to the original vector on the same free-body diagram unless the diagram
+clearly states that the original vector has been replaced by its components.
+
+\section*{Forces are not their components}
+
+A common error is to draw both a force and its Cartesian components as if all three
+were separate forces.  Suppose an applied force has magnitude \(F\) and is at
+angle \(\theta\) above the positive \(x\)-axis.  One may write
+\[
+\mathbf F
+=F\cos\theta\,\hat{\mathbf i}
++F\sin\theta\,\hat{\mathbf j}.
+\]
+The two component terms are a representation of \(\mathbf F\); they are not two
+additional interactions.
+
+The same warning applies to weight on an incline.  The gravitational interaction
+is one force \(m\mathbf g\), even though it is often convenient to resolve it into
+components parallel and perpendicular to the plane.
+
+\section*{Newton's third law and free-body diagrams}
+
+Newton's third law states that if body \(A\) exerts a force on body \(B\), then
+body \(B\) exerts an equal and opposite force on body \(A\):
+\[
+\mathbf F_{A\to B}=-\mathbf F_{B\to A}.
+\]
+The two forces act on \emph{different bodies}.  Therefore they do not normally
+appear together on the free-body diagram of either body.
+
+For a book resting on a table, the normal force exerted by the table on the book
+and the weight of the book are not a third-law pair.  Both act on the book.  The
+third-law partner of the table's normal force on the book is the book's contact
+force on the table.  The third-law partner of the Earth's gravitational force on
+the book is the book's gravitational force on the Earth.
+
+This distinction prevents one of the most persistent introductory-mechanics
+errors: interpreting every pair of equal and opposite arrows on a single diagram
+as a Newton's-third-law pair.
+
+\section*{Choosing coordinate axes}
+
+Coordinate axes are mathematical choices, not physical forces.  Good axes simplify
+the equations.
+
+\subsection*{Inclined surfaces}
+
+For a block on a plane inclined at angle \(\theta\), choose the \(x\)-axis along
+the plane and the \(y\)-axis normal to it.  Then weight resolves as
+\[
+W_x=mg\sin\theta,
+\qquad
+W_y=-mg\cos\theta.
+\]
+The normal force lies entirely along the \(y\)-axis and friction, when present,
+lies along the \(x\)-axis.
+
+\subsection*{Circular motion}
+
+For motion on a curved path, radial--tangential coordinates are often more useful
+than fixed Cartesian axes.  The radial equation contains the normal acceleration
+\[
+a_r=\frac{v^2}{r}
+\]
+directed toward the center of curvature, while the tangential equation contains
+\(a_t=dv/dt\).
+
+No separate ``centripetal force'' should be added to the free-body diagram in an
+inertial frame.  The phrase centripetal force refers to the radial component of the
+\emph{net real force}:
+\[
+\sum F_r=m\frac{v^2}{r}.
+\]
+
+\section*{Particle and rigid-body free-body diagrams}
+
+When only translational motion matters, a body may often be represented by a point.
+In rigid-body statics or dynamics, however, the location and line of action of each
+force matters because torque depends on the moment arm.  A rigid-body free-body
+diagram should therefore preserve enough geometry to determine
+\[
+\boldsymbol\tau_O=\mathbf r\times\mathbf F.
+\]
+
+Distributed loads may be replaced by equivalent resultant forces when the
+resultant magnitude and line of action are known.  The replacement must preserve
+both the net force and the appropriate moment for the intended calculation.
+
+\section*{Ten essential free-body-diagram archetypes}
+
+The following archetypes cover a large fraction of first-year mechanics problems.
+The descriptions specify the force arrows that belong on the diagram.
+
+\subsection*{1. Object resting on a horizontal surface}
+
+For a body at rest on a horizontal table with no other forces:
+\[
+\begin{array}{c}
+\uparrow\ N\\
+\text{body}\\
+\downarrow\ mg
+\end{array}
+\]
+The vertical equation is
+\[
+N-mg=0.
+\]
+
+\subsection*{2. Horizontal push on a frictionless surface}
+
+The forces are weight downward, normal force upward, and the applied force
+horizontally:
+\[
+\sum F_x=F=ma,
+\qquad
+N-mg=0.
+\]
+
+\subsection*{3. Horizontal push with kinetic friction}
+
+The horizontal forces are the applied force and kinetic friction in the opposite
+direction:
+\[
+F-f_k=ma,
+\qquad
+f_k=\mu_kN.
+\]
+
+\subsection*{4. Block on a frictionless incline}
+
+The forces are weight and the normal force.  With axes along and normal to the
+plane,
+\[
+mg\sin\theta=ma,
+\qquad
+N=mg\cos\theta.
+\]
+The downhill acceleration is therefore
+\[
+a=g\sin\theta.
+\]
+
+\subsection*{5. Block on a rough incline}
+
+The forces are weight, normal force, and friction.  If the block slides downhill,
+kinetic friction points uphill and
+\[
+mg\sin\theta-\mu_kmg\cos\theta=ma.
+\]
+If the block is static, the friction magnitude is whatever is required by
+equilibrium provided \(|f_s|\leq\mu_sN\).
+
+\subsection*{6. Hanging mass}
+
+For a mass suspended by a vertical string, the forces are tension upward and
+weight downward:
+\[
+T-mg=ma_y.
+\]
+The sign of \(a_y\) depends on the chosen positive direction.
+
+\subsection*{7. Two-mass Atwood machine}
+
+Each mass requires its own free-body diagram unless the two masses are selected as
+one system.  For an ideal string and pulley with \(m_2>m_1\),
+\[
+T-m_1g=m_1a,
+\]
+\[
+m_2g-T=m_2a.
+\]
+Adding the equations eliminates the internal tension and gives
+\[
+a=\frac{(m_2-m_1)g}{m_1+m_2}.
+\]
+
+\subsection*{8. Mass attached to a spring}
+
+For horizontal motion on a frictionless surface, the horizontal force is the
+spring force:
+\[
+-kx=m\ddot x.
+\]
+Weight and normal force cancel vertically.
+
+\subsection*{9. Object moving through a fluid}
+
+For a body falling vertically through a fluid, weight acts downward while drag
+acts opposite the relative velocity.  With downward chosen positive and a linear
+drag model,
+\[
+mg-bv=m\frac{dv}{dt}.
+\]
+At terminal speed, the acceleration is zero, so
+\[
+v_t=\frac{mg}{b}.
+\]
+
+\subsection*{10. Object in vertical circular motion}
+
+At the bottom of a vertical circular path, the inward radial direction is upward.
+If the inward forces are supplied by a normal force and weight,
+\[
+N-mg=m\frac{v^2}{r}.
+\]
+At the top of an inside loop, both weight and a positive inward normal force point
+toward the center:
+\[
+N+mg=m\frac{v^2}{r}.
+\]
+The force diagram changes with position because the radial direction changes.
+
+\section*{Worked examples}
+
+\subsection*{Example 1: block pulled across a frictionless table}
+
+A \(5.0\,\mathrm{kg}\) block is pulled horizontally by a \(20\,\mathrm{N}\) force
+on a frictionless horizontal surface.  Find the acceleration and normal force.
+
+The free-body diagram contains three forces: \(20\,\mathrm{N}\) horizontally,
+\(N\) upward, and \(mg\) downward.  Newton's equations are
+\[
+20=5.0a
+\]
+and
+\[
+N-5.0g=0.
+\]
+Hence
+\[
+a=4.0\,\mathrm{m/s^2}
+\]
+and, using \(g=9.8\,\mathrm{m/s^2}\),
+\[
+N=49\,\mathrm{N}.
+\]
+
+\subsection*{Example 2: block pulled upward at an angle}
+
+A \(10\,\mathrm{kg}\) block on a horizontal floor is pulled by a
+\(50\,\mathrm{N}\) force at \(30^\circ\) above the horizontal.  The coefficient
+of kinetic friction is \(\mu_k=0.20\).  Find the acceleration.
+
+The vertical force balance determines the normal force:
+\[
+N+50\sin30^\circ-mg=0.
+\]
+Thus
+\[
+N=98-25=73\,\mathrm{N}.
+\]
+The kinetic friction is
+\[
+f_k=\mu_kN=14.6\,\mathrm{N}.
+\]
+The horizontal equation is
+\[
+50\cos30^\circ-14.6=10a.
+\]
+Therefore
+\[
+a\approx2.87\,\mathrm{m/s^2}.
+\]
+
+This example shows why one should not assume \(N=mg\): the upward component of the
+pull reduces the normal force and therefore reduces the kinetic friction.
+
+\subsection*{Example 3: frictionless incline}
+
+A \(3.0\,\mathrm{kg}\) block slides on a frictionless plane inclined
+\(25^\circ\) above the horizontal.  Choose axes parallel and perpendicular to the
+plane.  The free-body diagram contains only \(mg\) and \(N\).  The equations are
+\[
+mg\sin25^\circ=ma
+\]
+and
+\[
+N-mg\cos25^\circ=0.
+\]
+Thus
+\[
+a=g\sin25^\circ\approx4.14\,\mathrm{m/s^2}
+\]
+and
+\[
+N=mg\cos25^\circ\approx26.6\,\mathrm{N}.
+\]
+
+\subsection*{Example 4: two blocks and system selection}
+
+Two blocks of masses \(m_1=2.0\,\mathrm{kg}\) and \(m_2=3.0\,\mathrm{kg}\) are in
+contact on a frictionless table.  A horizontal \(15\,\mathrm{N}\) force pushes
+\(m_1\), which pushes \(m_2\).  Find the acceleration and the contact force on
+\(m_2\).
+
+First choose both blocks as one system.  The contact force is internal, so
+\[
+15=(m_1+m_2)a.
+\]
+Hence
+\[
+a=\frac{15}{5.0}=3.0\,\mathrm{m/s^2}.
+\]
+Now isolate \(m_2\).  Its only horizontal force is the contact force \(C\), so
+\[
+C=m_2a=(3.0)(3.0)=9.0\,\mathrm{N}.
+\]
+
+This example demonstrates why system choice is part of free-body-diagram skill,
+not a separate topic.
+
+\subsection*{Example 5: Atwood machine}
+
+Masses \(m_1=2.0\,\mathrm{kg}\) and \(m_2=5.0\,\mathrm{kg}\) are connected by an
+ideal string over an ideal pulley.  The heavier mass moves downward.  The two
+free-body diagrams give
+\[
+T-m_1g=m_1a
+\]
+and
+\[
+m_2g-T=m_2a.
+\]
+Adding gives
+\[
+a=\frac{m_2-m_1}{m_1+m_2}g
+ =\frac{3}{7}(9.8)
+ \approx4.2\,\mathrm{m/s^2}.
+\]
+Then
+\[
+T=m_1(g+a)
+\approx2.0(14.0)
+\approx28\,\mathrm{N}.
+\]
+
+\subsection*{Example 6: normal force at the bottom of a circular path}
+
+A \(60\,\mathrm{kg}\) rider moves through the bottom of a circular arc of radius
+\(20\,\mathrm{m}\) at \(10\,\mathrm{m/s}\).  Find the normal force exerted by the
+seat on the rider.
+
+At the bottom, the inward radial direction is upward.  The free-body diagram has
+normal force upward and weight downward.  Therefore
+\[
+N-mg=m\frac{v^2}{r}.
+\]
+Thus
+\[
+N=m\left(g+\frac{v^2}{r}\right)
+=60\left(9.8+\frac{100}{20}\right)
+=888\,\mathrm{N}.
+\]
+The normal force exceeds the rider's weight because a net upward force is required
+to bend the velocity vector toward the center of curvature.
+
+\section*{Common errors}
+
+\begin{enumerate}
+\item \emph{Drawing motion as a force.} Velocity and acceleration are not forces.
+They should not appear as force arrows on an inertial-frame free-body diagram.
+
+\item \emph{Adding a centripetal-force arrow.} In an inertial frame, ``centripetal
+force'' is the inward component of the net real force, not an extra interaction.
+
+\item \emph{Assuming \(N=mg\).} The normal force is determined by the normal
+equation of motion and may be larger or smaller than the weight.
+
+\item \emph{Setting static friction automatically equal to \(\mu_sN\).} Static
+friction adjusts up to its maximum magnitude.
+
+\item \emph{Drawing both a force and its components as separate forces.} Choose one
+representation.
+
+\item \emph{Putting a Newton's-third-law pair on one body's diagram.} Third-law
+partners act on different bodies.
+
+\item \emph{Drawing forces exerted by the chosen object rather than forces acting
+on it.} The free-body diagram represents the forces \emph{on} the system.
+
+\item \emph{Including internal forces on a whole-system diagram.} Once several
+bodies are selected as one system, forces between those bodies are internal.
+
+\item \emph{Choosing awkward axes.} Coordinate axes should normally follow the
+geometry of the constraints or acceleration.
+
+\item \emph{Using a point diagram when torque matters.} A rigid-body diagram must
+preserve force locations and lines of action when moments are needed.
+\end{enumerate}
+
+\section*{System-boundary strategy}
+
+A free-body diagram is often easier if the system is selected to match the desired
+unknown.
+
+Suppose two bodies are connected by an ideal string.  If the goal is the common
+acceleration, selecting both bodies as one system may eliminate the tension from
+the equations.  If the goal is the tension, at least one of the bodies must then be
+isolated after the acceleration is known.
+
+The same idea applies to contact forces.  Internal contact forces cancel in the
+sum of Newton's equations for the total system because of Newton's third law.  The
+center-of-mass equation
+\[
+M\mathbf a_{\mathrm{cm}}=\sum\mathbf F_{\mathrm{ext}}
+\]
+is the general expression of this fact.
+
+\section*{Free-body diagrams in non-inertial frames}
+
+The usual free-body diagram contains real interaction forces and is used with
+Newton's laws in an inertial frame.  In an accelerating reference frame, Newton's
+second law can be retained in its familiar form only by introducing inertial or
+fictitious forces.
+
+For a frame translating with acceleration \(\mathbf a_0\) but not rotating, one
+may write
+\[
+\sum\mathbf F_{\mathrm{real}}-m\mathbf a_0
+=m\mathbf a_{\mathrm{relative}}.
+\]
+The term \(-m\mathbf a_0\) is not a new physical interaction; it is a consequence
+of using a non-inertial coordinate system.
+
+Rotating frames add centrifugal, Coriolis, and, when the rotation rate changes,
+Euler inertial terms.  Such terms should be clearly marked as inertial forces so
+that they are not confused with interactions such as gravity, contact, or tension.
+
+\section*{Connection to analytical mechanics}
+
+Free-body diagrams are central to Newtonian mechanics, but constrained systems can
+become cumbersome when many unknown constraint forces must be included.  This is
+one motivation for generalized coordinates and Lagrangian mechanics.
+
+In Newtonian form, one writes all relevant external forces and then applies
+\[
+\sum\mathbf F=m\mathbf a.
+\]
+In Lagrangian mechanics, ideal constraint forces can often be eliminated by
+choosing coordinates that already satisfy the constraints.  The two methods are
+not competing descriptions: the Lagrangian method reorganizes the same mechanics
+so that some forces need not be solved explicitly.
+
+The free-body diagram therefore remains valuable even after analytical mechanics
+is introduced.  It clarifies which physical interactions exist, which forces are
+constraints, and which generalized forces should appear in the equations.
+
+\section*{Practice exercises}
+
+Unless otherwise stated, use \(g=9.8\,\mathrm{m/s^2}\).  For each problem, draw a
+free-body diagram before writing equations.
+
+\begin{enumerate}
+\item A \(4.0\,\mathrm{kg}\) block rests on a horizontal table.  Find the normal
+force.
+
+\item A \(6.0\,\mathrm{kg}\) block on a frictionless table is pulled horizontally
+by \(18\,\mathrm{N}\).  Find its acceleration.
+
+\item A \(10\,\mathrm{kg}\) block is pulled horizontally by \(40\,\mathrm{N}\)
+on a surface with \(\mu_k=0.25\).  Find the acceleration.
+
+\item A \(5.0\,\mathrm{kg}\) block rests on a \(30^\circ\) frictionless incline.
+Find the normal force and the component of gravity along the plane.
+
+\item The block in the preceding problem is held at rest by a string parallel to
+the incline.  Find the tension.
+
+\item A \(3.0\,\mathrm{kg}\) mass hangs at rest from a vertical string.  Find the
+tension.  Then state how the answer changes qualitatively if the mass accelerates
+upward.
+
+\item A \(2.0\,\mathrm{kg}\) block lies on top of a \(5.0\,\mathrm{kg}\) block.
+The floor under the lower block is frictionless.  A horizontal external force acts
+on the lower block, and static friction prevents slipping between the blocks.
+Draw separate free-body diagrams for each block and one diagram for the combined
+system.
+
+\item An elevator of mass \(800\,\mathrm{kg}\) accelerates upward at
+\(1.5\,\mathrm{m/s^2}\).  Find the cable tension.
+
+\item A \(1200\,\mathrm{kg}\) car travels at constant speed around a level circular
+curve of radius \(50\,\mathrm{m}\) at \(15\,\mathrm{m/s}\).  Identify the force
+that supplies the required radial acceleration and find its magnitude.
+
+\item A \(0.50\,\mathrm{kg}\) mass attached to a horizontal spring with
+\(k=80\,\mathrm{N/m}\) is displaced \(0.10\,\mathrm{m}\) to the right on a
+frictionless surface.  Draw the free-body diagram and find the initial
+acceleration.
+
+\item A skydiver of mass \(75\,\mathrm{kg}\) is falling at terminal speed.  Find
+the magnitude of the drag force.
+
+\item A \(2.0\,\mathrm{kg}\) block is pressed against a vertical wall by a
+horizontal force of \(60\,\mathrm{N}\).  The coefficient of static friction is
+\(0.40\).  Determine whether static friction can support the block.
+
+\item Two masses \(m_1=4.0\,\mathrm{kg}\) and \(m_2=6.0\,\mathrm{kg}\) form an
+ideal Atwood machine.  Find the acceleration and string tension.
+
+\item A \(50\,\mathrm{kg}\) rider passes over the top of a convex circular hill of
+radius \(25\,\mathrm{m}\) at \(12\,\mathrm{m/s}\).  Find the normal force from
+the seat on the rider.
+\end{enumerate}
+
+\subsection*{Answers to practice exercises}
+
+\begin{enumerate}
+\item \(N=39.2\,\mathrm{N}\).
+
+\item \(a=3.0\,\mathrm{m/s^2}\).
+
+\item \(N=98\,\mathrm{N}\), \(f_k=24.5\,\mathrm{N}\), and
+\(a=1.55\,\mathrm{m/s^2}\).
+
+\item \(N=mg\cos30^\circ\approx42.4\,\mathrm{N}\); downhill component
+\(mg\sin30^\circ=24.5\,\mathrm{N}\).
+
+\item \(T=mg\sin30^\circ=24.5\,\mathrm{N}\).
+
+\item At rest, \(T=mg=29.4\,\mathrm{N}\).  For upward acceleration, \(T>mg\).
+
+\item The top block has weight, normal force, and horizontal static friction.  The
+bottom block has its weight, floor normal force, the downward contact force from
+the upper block, the applied force, and friction opposite to that on the upper
+block.  On the combined-system diagram, the inter-block normal and friction forces
+are internal and are omitted.
+
+\item \(T=m(g+a)=800(11.3)=9.04\times10^3\,\mathrm{N}\).
+
+\item Static friction from the road supplies the radial force.  Its required
+magnitude is \(mv^2/r=5.40\times10^3\,\mathrm{N}\).
+
+\item The spring force is \(8.0\,\mathrm{N}\) to the left, giving
+\(a=16\,\mathrm{m/s^2}\) to the left.
+
+\item At terminal speed, drag balances weight, so \(F_d=735\,\mathrm{N}\).
+
+\item The required static friction is \(mg=19.6\,\mathrm{N}\).  The maximum is
+\(\mu_sN=0.40(60)=24\,\mathrm{N}\), so the block can remain at rest.
+
+\item
+\[
+a=\frac{(6-4)g}{6+4}=1.96\,\mathrm{m/s^2},
+\]
+and
+\[
+T=m_1(g+a)=4(11.76)\approx47.0\,\mathrm{N}.
+\]
+
+\item At the top of the hill, inward is downward:
+\[
+mg-N=m\frac{v^2}{r}.
+\]
+Thus
+\[
+N=m\left(g-\frac{v^2}{r}\right)
+=50(9.8-5.76)=202\,\mathrm{N}.
+\]
+\end{enumerate}
+
+\section*{GRE-style speed practice}
+
+The following questions are original practice questions designed to emphasize the
+short conceptual and algebraic reasoning useful on a timed physics examination.
+They are not reproduced from an ETS examination.
+
+\begin{enumerate}
+\item A block rests on a horizontal table.  Which two forces appear on the block's
+free-body diagram if no other object touches it?
+
+(A) weight and the block's force on the table
+
+(B) weight and the table's normal force on the block
+
+(C) the table's normal force and its Newton's-third-law partner
+
+(D) weight only
+
+(E) normal force only
+
+\item A block slides down a rough incline.  Kinetic friction on the block points
+
+(A) vertically upward,
+(B) perpendicular to the plane,
+(C) down the plane,
+(D) up the plane,
+(E) opposite gravity.
+
+\item A box is pulled across a floor by a rope angled upward.  Compared with the
+same horizontal pull magnitude, the upward rope angle generally
+
+(A) increases the normal force,
+(B) decreases the normal force,
+(C) leaves the normal force unchanged,
+(D) eliminates weight,
+(E) reverses friction.
+
+\item A car moves at constant speed around a level circular track.  In an inertial
+frame, the free-body diagram should contain
+
+(A) a separate inward centripetal force in addition to all real forces,
+(B) no horizontal force,
+(C) the real horizontal interaction that produces the inward net force,
+(D) an outward centrifugal force only,
+(E) an inward velocity vector as a force.
+
+\item A mass hangs motionless from a single vertical ideal string.  Its tension is
+
+(A) zero,
+(B) less than \(mg\),
+(C) equal to \(mg\),
+(D) greater than \(mg\),
+(E) impossible to determine.
+
+\item A block is at rest on an incline and static friction is present.  Which
+statement is always correct?
+
+(A) \(f_s=\mu_sN\)
+
+(B) \(f_s<0\)
+
+(C) \(|f_s|\leq\mu_sN\)
+
+(D) \(f_s=mg\)
+
+(E) friction must point uphill regardless of other applied forces.
+
+\item Two blocks are in contact on a frictionless horizontal table and are treated
+as one system.  The contact force between them is
+
+(A) an external force that must be included twice,
+(B) an internal force and need not appear on the system free-body diagram,
+(C) equal to the total weight,
+(D) a fictitious force,
+(E) zero.
+
+\item At the bottom of a vertical circular path, a rider's speed is nonzero.  If
+\(N\) is the upward normal force and \(mg\) is the downward weight, the radial
+equation is
+
+(A) \(N+mg=0\),
+(B) \(mg-N=mv^2/r\),
+(C) \(N-mg=mv^2/r\),
+(D) \(N=mg\) always,
+(E) \(N=mv^2/r\) with weight omitted.
+\end{enumerate}
+
+\subsection*{Answers to GRE-style speed practice}
+
+The answers are
+\[
+\boxed{1\text{ B},\;2\text{ D},\;3\text{ B},\;4\text{ C},\;5\text{ C},\;6\text{ C},\;7\text{ B},\;8\text{ C}}.
+\]
+
+\section*{Source and licensing note}
+
+The basic organizational idea used here---isolate a body, replace its interactions
+with external forces, and label the relevant geometry---is adapted and expanded
+from the openly licensed \emph{Mechanics Map} treatment of free-body diagrams by
+Jacob Moore and contributors.  \emph{Mechanics Map} is distributed under the
+Creative Commons Attribution--ShareAlike 4.0 International license.  The present
+entry adds the system-boundary treatment, Newton's-third-law diagnostics,
+force-versus-component discussion, coordinate strategy, circular-motion cautions,
+rigid-body extension, non-inertial-frame extension, analytical-mechanics bridge,
+worked examples, and original exercise sets.
+
+The introductory mechanics sequence was also checked against Tom Weideman's
+\emph{UCD Physics 9A -- Classical Mechanics}, distributed through Physics
+LibreTexts under the Creative Commons Attribution--ShareAlike 4.0 International
+license.
+
+No external figures are reproduced.  The schematic displays and all numerical
+worked examples and practice questions in this entry are original to this
+PhysicsLibrary adaptation.
+
+\begin{thebibliography}{9}
+
+\bibitem{mechanicsmap}
+J. Moore and contributors,
+\emph{Mechanics Map}, section ``Free Body Diagrams,'' Engineering LibreTexts.
+\PMlinkexternal{Mechanics Map: Free Body Diagrams}{https://eng.libretexts.org/Bookshelves/Mechanical_Engineering/Mechanics_Map_(Moore_et_al.)/05:_Newton's_Laws_and_Equilibrium/5.07:_Free_Body_Diagrams}.
+
+\bibitem{weideman}
+T. Weideman,
+\emph{UCD Physics 9A -- Classical Mechanics}, Physics LibreTexts.
+\PMlinkexternal{UCD Physics 9A -- Classical Mechanics}{https://phys.libretexts.org/Courses/University_of_California_Davis/UCD:_Classical_Mechanics}.
+
+\bibitem{newton}
+I. Newton,
+\emph{Philosophiae Naturalis Principia Mathematica}, 1687.
+
+\end{thebibliography}
